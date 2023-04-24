@@ -48,8 +48,12 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         stance = "far-right";
       }
+      
+      const response = await fetch(`http://127.0.0.1:5000/?url=${currentUrl}&bias=${stance}`);
+      const responseData = await response.json();
+      const text = responseData.text;
 
-      window.open(`newspage.html?url=${currentUrl}&bias=${stance}`, "_blank");
+      window.open(`newspage.html?text=${text}`, "_blank");
 
     });
 });

@@ -1,9 +1,11 @@
 
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", function() {
     const loadingScreen = document.getElementById('loading-screen');
 
-    const hideLoadingScreen = () => {
+    const showLoadingScreen = () => {
+        setTimeout(() => {
         loadingScreen.style.display = 'none';
+        }, 0);
     };
 
     function addContent(text){
@@ -21,20 +23,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.getElementById('content').innerHTML = html;
     }
 
-    async function getText() {
-        let params = (new URL(document.location)).searchParams;
-        let url = params.get("url");
-        let bias = params.get("bias")
-
-
-        const response = await fetch(`http://127.0.0.1:5000/?url=${url}&bias=${bias}`);
-        const responseData = await response.json();
-        return responseData.article;
-
-    }
-
-    text = await getText()
+    showLoadingScreen();
+    let params = (new URL(document.location)).searchParams;
+    let text = params.get("text");
     addContent(text)
-
-    hideLoadingScreen();
 })
