@@ -1,0 +1,57 @@
+body {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+}
+
+.container-mt-3 {
+    width: 450px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 25vh;
+    align-self: center;
+}
+
+#slider {
+    background: linear-gradient(to right, blue, red); 
+    background-size: 100% 100%; 
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+}
+
+#slider-bar {
+    display: flex;
+}
+
+#politics {
+    font-size: 20px;
+}
+
+.fancy-button {
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 20px;
+	transition: background-color 0.5s;
+  }
+  
+  .fancy-button:hover {
+	background-color: white;
+	color: black;
+	cursor: pointer;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
