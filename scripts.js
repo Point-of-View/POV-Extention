@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         stance = "far-right";
       }
 
-      window.open(`localhost:3000?url=${url}&bias=far-right`, "_blank");
+      window.open(`localhost:3000?url=${currentUrl}&bias=far-right`, "_blank");
 
     });
 });
